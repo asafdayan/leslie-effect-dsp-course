@@ -36,6 +36,15 @@ python3 leslie.py dry/input.wav wet/output_slow.wav --rate 1.2 --center-delay 5 
 
 Place the dry sample in `dry/`, then write the processed file to `wet/`.
 
+## Example Audio
+
+Dry input sample:
+
+[dry/test_chord.wav](dry/test_chord.wav)
+
+Processed Leslie output:
+
+[wet/test_chord_leslie.wav](wet/test_chord_leslie.wav)
 
 ## Files
 
