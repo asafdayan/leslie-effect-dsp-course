@@ -38,15 +38,15 @@ Place the dry sample in `dry/`, then write the processed file to `wet/`.
 
 Dry input sample:
 
-<audio controls src="dry/test_chord.wav"></audio>
+<audio controls src="dry/test_chord.mp4"></audio>
 
-[Download dry sample](dry/test_chord.wav)
+[Download dry sample](dry/test_chord.mp4)
 
 Processed Leslie output:
 
-<audio controls src="wet/test_chord_leslie.wav"></audio>
+<audio controls src="wet/test_chord_leslie.mp4"></audio>
 
-[Download processed sample](wet/test_chord_leslie.wav)
+[Download processed sample](wet/test_chord_leslie.mp4)
 
 ## Files
 
