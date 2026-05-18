@@ -1,4 +1,5 @@
-# Leslie Effect Special Assignment
+
+# Leslie Effect 
 
 ## Requirements
 
@@ -7,6 +8,7 @@ Python 3 with NumPy and SciPy:
 ```bash
 python3 -m pip install numpy scipy
 ```
+
 
 ## Usage
 
@@ -34,15 +36,6 @@ python3 leslie.py dry/input.wav wet/output_slow.wav --rate 1.2 --center-delay 5 
 
 Place the dry sample in `dry/`, then write the processed file to `wet/`.
 
-## Example Audio
-
-Dry input sample:
-
-<video controls src="dry/test_chord.mp4" width="640"></video>
-
-Processed Leslie output:
-
-<video controls src="wet/test_chord_leslie.mp4" width="640"></video>
 
 ## Files
 
