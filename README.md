@@ -1,5 +1,9 @@
+# Leslie Effect Special Assignment
 
-# Leslie Effect 
+Python implementation of a Leslie / rotary loudspeaker effect for the DSP
+special assignment. The implementation follows the DAFX rotary-speaker idea:
+two opposite modulated delay lines, synchronous amplitude modulation, and
+unequal stereo mixing.
 
 ## Requirements
 
@@ -8,7 +12,6 @@ Python 3 with NumPy and SciPy:
 ```bash
 python3 -m pip install numpy scipy
 ```
-
 
 ## Usage
 
@@ -19,8 +22,8 @@ python3 leslie.py dry/input.wav wet/output_leslie.wav
 Useful optional controls:
 
 ```bash
-python3 leslie.py dry/input.wav wet/output_fast.wav --rate 6 --center-delay 5 --depth 2
-python3 leslie.py dry/input.wav wet/output_slow.wav --rate 1.2 --center-delay 5 --depth 2
+python3 leslie.py dry/input.wav wet/output_fast.wav --rate 6.5 --center-delay 6 --depth 3 --amp-depth 0.85 --cross-mix 0.4
+python3 leslie.py dry/input.wav wet/output_slow.wav --rate 2 --center-delay 6 --depth 1 --amp-depth 0.35 --cross-mix 0.6
 ```
 
 ## Options
@@ -34,20 +37,20 @@ python3 leslie.py dry/input.wav wet/output_slow.wav --rate 1.2 --center-delay 5 
 - `--cross-mix`: opposite-horn stereo cross mix from `0` to `1`. Default: `0.7`.
 - `-h`, `--help`: show the command-line help.
 
-Place the dry sample in `dry/`, then write the processed file to `wet/`.
+Place dry samples in `dry/`, then write processed files to `wet/`.
 
-## Example Audio
+## Demo Commands
 
-Dry input sample:
+The submitted demo files were produced with three intentionally different
+styles:
 
-[dry/test_chord.wav](dry/test_chord.wav)
+```bash
+python3 leslie.py dry/casta.wav wet/casta_slow_wide.wav --rate 2.0 --center-delay 6 --depth 1.0 --amp-depth 0.35 --cross-mix 0.6
+python3 leslie.py dry/casta.wav wet/casta_classic_fast.wav --rate 6.5 --center-delay 6 --depth 3.0 --amp-depth 0.85 --cross-mix 0.4
+python3 leslie.py dry/casta.wav wet/casta_dramatic.wav --rate 8.5 --center-delay 9 --depth 5.0 --amp-depth 0.95 --cross-mix 0.2
 
-Processed Leslie output:
+python3 leslie.py dry/speechshort.wav wet/speechshort_slow_wide.wav --rate 2.0 --center-delay 6 --depth 1.0 --amp-depth 0.35 --cross-mix 0.6
+python3 leslie.py dry/speechshort.wav wet/speechshort_classic_fast.wav --rate 6.5 --center-delay 6 --depth 3.0 --amp-depth 0.85 --cross-mix 0.4
+python3 leslie.py dry/speechshort.wav wet/speechshort_dramatic.wav --rate 8.5 --center-delay 9 --depth 5.0 --amp-depth 0.95 --cross-mix 0.2
+```
 
-[wet/test_chord_leslie.wav](wet/test_chord_leslie.wav)
-
-## Files
-
-- `leslie.py`: runnable Leslie effect implementation.
-- `dry/`: dry input samples.
-- `wet/`: processed wet output samples.

@@ -91,8 +91,8 @@ def leslie_effect(
     horn_a = fractional_variable_delay(x, delay_a)
     horn_b = fractional_variable_delay(x, delay_b)
 
-    amp_a = 1.0 + amp_depth * lfo
-    amp_b = 1.0 - amp_depth * lfo
+    amp_a = 1.0 - amp_depth * lfo
+    amp_b = 1.0 + amp_depth * lfo
     horn_a *= amp_a
     horn_b *= amp_b
     """amplitude modulation"""
